@@ -12,6 +12,18 @@
     </Modal>
   </div>
   <button @click="toggleModal">open modal</button>
+  <br/>
+  <div v-if="showModalTwo">
+    <Modal theme="" @close="toggleModalTwo">
+      <template v-slot:links>
+        <a href="">help raise minimum wage?</a>
+        <a href="">recall Gascon?</a>
+      </template>
+      <h1>SECOND Giveaway!</h1>
+      <p>DOUBLE PRICE!!!</p>
+    </Modal>
+  </div>
+  <button @click="toggleModalTwo">open 2ND modal</button>
 </template>
 
 <script>
@@ -26,9 +38,8 @@ export default {
   data() {
     return {
       title: 'My First Vue App',
-      header: 'Sign up for the Giveaway!',
-      text: 'Grab your ninja swag for half price!',
       showModal: false,
+      showModalTwo: false,
     }
   },
   methods: {
@@ -39,6 +50,9 @@ export default {
     },
     toggleModal() {
       this.showModal = !this.showModal
+    },
+    toggleModalTwo() {
+      this.showModalTwo = !this.showModalTwo
     }
   }
 }
