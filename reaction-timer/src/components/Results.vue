@@ -1,12 +1,27 @@
 <template>
   <div class="results">
-    Reaction Time: {{ score }}ms
+    <p>Reaction Time: {{ score }}ms</p>
+    <p class="rank">Rank: {{ rank }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['score']
+  data() {
+    return{
+      rank: null
+    }
+  },
+  props: ['score'],
+  mounted() {
+    if (this.score < 251) {
+      this.rank = "Ninja Fingers!"
+    } else if (this.score < 501) {
+      this.rank = "Rapid Reflexes"
+    } else {
+      this.rank = "s  l    o        w"
+    }
+  }
 }
 
 </script>
@@ -21,5 +36,10 @@ export default {
     padding: 100px 0;
     margin: 40px auto;
   }
+.rank {
+  font-size: 1.4em;
+  color: #0faf87;
+  font-weight: bold;
+}
 
 </style>
