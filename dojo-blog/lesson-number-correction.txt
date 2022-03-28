@@ -1,0 +1,14 @@
+*here at https://www.youtube.com/watch?v=V-kxBWcPJfo&list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1&index=10&t=31m57s 
+i notice that his lessons-[num] system diverges at lesson-57, where the project in repo is called “project-planner”
+Hmm…not clear how to proceed from here?
+Ok, so we can keep using the lesson-[num] we had been, but it’s of limited practical use
+So just ripping through a bit
+Tried 71, which has dojo-blog, so we’re getting warmer…
+71 is well behind where we are here
+80 is too far
+74 is the previous lesson (“61”)
+But it looks like 75 is way ahead lololol
+Actually wait, it does have the
+    const names = ref(['mario', 'yoshi', 'luigi', 'toad', 'bowser', 'koopa', 'peach'])
+	… so this might be the sync right here
+Ok, yes, this seems like it will be fine, so let’s call it lesson-75 and keep moving…
