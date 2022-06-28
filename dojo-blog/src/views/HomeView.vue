@@ -29,8 +29,8 @@ export default {
         }
         posts.value = await data.json()
       }
-      catch(err) {
-        error.value = err.message
+      catch(durrrr) {
+        error.value = durrrr.message
         console.log(error.value)
       }
     }
