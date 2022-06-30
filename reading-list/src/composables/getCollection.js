@@ -11,6 +11,7 @@ const getCollection = (c, q) => {
   let colRef = collection(db, c)
 
   if (q) {
+    console.log(...q)
     colRef = query(colRef, where(...q))
   }
 
@@ -19,6 +20,7 @@ const getCollection = (c, q) => {
     snapshot.docs.forEach(doc => {
       results.push({ ...doc.data(), id: doc.id })
     })
+    
     // update values
     documents.value = results
   })
@@ -26,6 +28,7 @@ const getCollection = (c, q) => {
   watchEffect((onInvalidate) => {
     onInvalidate(() => unsub())
   })
+
   return { documents }
 }
 
